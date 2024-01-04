@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { AuthServiceService } from './services/auth-service.service';
 
 @Component({
   selector: 'app-root',
@@ -12,4 +13,9 @@ import { FormsModule } from '@angular/forms';
 })
 export class AppComponent {
   title = 'BlogApplication';
+  constructor(public authService: AuthServiceService) {}
+
+  toggleAuthentication(): void {
+    this.authService.toggleAuthentication();
+  }
 }
