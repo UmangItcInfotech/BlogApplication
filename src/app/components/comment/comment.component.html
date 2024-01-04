@@ -1,0 +1,16 @@
+<!-- comment.component.html -->
+<div *ngIf="blogPost">
+    <h3>Comments</h3>
+    <ul>
+      <li *ngFor="let comment of blogPost.comments">{{ comment.content }}</li>
+    </ul>
+  
+    <form #commentForm="ngForm" (ngSubmit)="onSubmit(commentForm)">
+      <div>
+        <label for="content">Add Comment:</label>
+        <input type="text" id="content" name="content" [(ngModel)]="newComment.content" required />
+      </div>
+      <button type="submit" [disabled]="!commentForm.valid">Submit Comment</button>
+    </form>
+  </div>
+  

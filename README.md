@@ -1,27 +1,18 @@
-# BlogApplication
+Use Case: Blog Application
+----------------------------
+1. Angular Components:
+Create a PostListComponent component to display a list of blog posts.
+Develop a PostDetailComponent to show the detailed view of a blog post.
+Implement a CommentComponent for displaying comments on a post.
+2. Angular Directive:
+Use a custom directive, let's call it appHighlight, to highlight certain elements, such as important words or tags, within blog posts.
+3. Angular Forms:
+Utilize an AddPostComponent with an Angular form to allow users to create and submit new blog posts.
+Implement a form in the CommentComponent for users to add comments to a blog post.
+4. Angular Routes, Guards, and Services:
+- Set up routes for navigating between the list of posts (PostListComponent), individual post details (PostDetailComponent), and adding a new post (AddPostComponent).
+- Implement a route guard, AuthGuard, to protect the AddPostComponent route, ensuring only authenticated users can add new posts.
+- Create an AuthService to manage user authentication, and use it in conjunction with the route guard to control access.
+By combining these Angular features, you've created a robust blog application where users can view a list of posts, read detailed post views, add comments, and submit new blog posts. The use of components, directives, forms, routes, guards, and services contributes to a well-organized and modular Angular application.
+Collapse
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.8.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
