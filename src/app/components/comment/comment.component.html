@@ -1,16 +1,16 @@
-<!-- comment.component.html -->
-<div *ngIf="blogPost">
-    <h3>Comments</h3>
-    <ul>
-      <li *ngFor="let comment of blogPost.comments">{{ comment.content }}</li>
-    </ul>
-  
-    <form #commentForm="ngForm" (ngSubmit)="onSubmit(commentForm)">
-      <div>
-        <label for="content">Add Comment:</label>
-        <input type="text" id="content" name="content" [(ngModel)]="newComment.content" required />
-      </div>
-      <button type="submit" [disabled]="!commentForm.valid">Submit Comment</button>
-    </form>
-  </div>
-  
+<div *ngIf="blogPost" class="container mt-4">
+  <h3 class="mb-3">Comments</h3>
+
+  <ul class="list-group">
+    <li *ngFor="let comment of blogPost.comments" class="list-group-item">{{ comment.content }}</li>
+  </ul>
+
+  <form #commentForm="ngForm" (ngSubmit)="onSubmit(commentForm)" class="mt-3">
+    <div class="form-group">
+      <label for="content">Add Comment:</label>
+      <input type="text" id="content" name="content" [(ngModel)]="newComment.content" class="form-control" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!commentForm.valid">Submit Comment</button>
+  </form>
+</div>
