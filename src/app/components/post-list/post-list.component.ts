@@ -30,4 +30,7 @@ export class PostListComponent implements OnInit {
 
 
  
+  navigateToPostDetails(post: BlogPost): void {
+    this.router.navigate(['/post/'+post.id]);
+  }
 }
