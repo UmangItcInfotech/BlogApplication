@@ -16,8 +16,6 @@
           <a class="nav-link" routerLink="/add-post">Add Post</a>
         </li>
       </ul>
-
-      <!-- Button for authentication -->
       <button class="btn btn-outline-primary my-2 my-lg-0 ml-auto" (click)="toggleAuthentication()">
         {{ authService.isAuthenticate() ? 'Logout' : 'Login' }}
       </button>
