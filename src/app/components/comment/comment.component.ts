@@ -14,7 +14,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 export class CommentComponent {
   @Input() blogPost: any;
 
-  newComment: any = {}; // Object to store comment data
+  newComment: any = {}; 
 
   constructor(private blogService: BlogServiceService) {}
 

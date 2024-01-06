@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
   styleUrl: './add-post.component.css'
 })
 export class AddPostComponent  {
-  newPost: any = {}; // Object to store form data
+  newPost: any = {}; 
 
   constructor(private blogService: BlogServiceService, private router: Router) {}
 

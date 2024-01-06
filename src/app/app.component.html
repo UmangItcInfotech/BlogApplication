@@ -16,8 +16,17 @@
           <a class="nav-link" routerLink="/add-post">Add Post</a>
         </li>
       </ul>
-      <button class="btn btn-outline-primary my-2 my-lg-0 ml-auto" (click)="toggleAuthentication()">
+      <!-- <button class="btn btn-outline-primary my-2 my-lg-0 ml-auto" (click)="toggleAuthentication()">
         {{ authService.isAuthenticate() ? 'Logout' : 'Login' }}
+      </button> -->
+    </div>
+
+    <div class="navbar-nav ml-auto">
+      <button class="btn btn-outline-primary mx-2" (click)="toggleAuthentication()">
+        Logout
+      </button>
+      <button class="btn btn-outline-success" routerLink="/register">
+        Register
       </button>
     </div>
   </nav>

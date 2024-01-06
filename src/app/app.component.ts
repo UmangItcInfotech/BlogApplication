@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, RouterOutlet } from '@angular/router';
+import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AuthServiceService } from './services/auth-service.service';
 
@@ -13,9 +13,10 @@ import { AuthServiceService } from './services/auth-service.service';
 })
 export class AppComponent {
   title = 'BlogApplication';
-  constructor(public authService: AuthServiceService) {}
+  constructor(public authService: AuthServiceService, private router: Router) {}
 
   toggleAuthentication(): void {
-    this.authService.toggleAuthentication();
+    this.authService.logout();
+    this.router.navigate(['/login']);
   }
 }

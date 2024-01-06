@@ -24,9 +24,9 @@ export class PostListComponent implements OnInit {
   private fetchBlogPosts(): void {
     this.blogPosts = this.blogService.getBlogPosts();
   }
-  toggleAuthentication(): void {
-    this.auth.toggleAuthentication();
-  }
+  // toggleAuthentication(): void {
+  //   this.auth.toggleAuthentication();
+  // }
 
 
  
